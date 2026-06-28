@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_primary95"
+    android:background="@color/background"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/banner_transactions"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="100dp"
             android:background="@drawable/header_background"
+            android:gravity="bottom"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -22,17 +27,72 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="FinanceFlow"
+                android:textColor="@android:color/white"
                 android:textSize="32sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Extrato"
+                android:text="Extra"
                 android:textColor="@color/graylight_text"
-                android:textSize="16sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="22dp"
+            app:cardBackgroundColor="#1565C0"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saldo Total"
+                    android:textColor="@color/graylight_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R$ 0,00"
+                    android:textColor="@color/white_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="true"/>
+
+        <Button
+            android:id="@+id/btn_newTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="New Transaction"
+            android:textColor="@color/white_text"
+            android:backgroundTint="@color/blue_button"
+            app:cornerRadius="12dp"/>
+    </LinearLayout>
 </ScrollView>
