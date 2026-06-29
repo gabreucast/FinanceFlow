@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FinanceFlow"
+                android:text="@string/financeflow"
                 android:textColor="@android:color/white"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Transaction"
+                android:text="@string/new_transaction"
                 android:textColor="@color/graylight_text"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -49,7 +49,7 @@
                 android:id="@+id/etValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Valor (R$)"
+                android:hint="@string/amount"
                 android:textColorHint="@color/black_text"
                 app:boxBackgroundColor="@color/white_box"
                 app:boxBackgroundMode="outline"
@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="Description"
+                android:hint="@string/description"
                 android:textColorHint="@color/black_text"
                 app:boxBackgroundColor="@color/white_box"
                 app:boxBackgroundMode="outline"
@@ -98,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="Date"
+                android:hint="@string/date"
                 android:textColorHint="@color/black_text"
                 app:boxBackgroundColor="@color/white_box"
                 app:boxBackgroundMode="outline"
@@ -137,7 +137,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TIPO"
+                        android:text="@string/type"
                         android:textColor="#808080"
                         android:textSize="12sp" />
 
@@ -154,7 +154,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Income"
+                            android:text="@string/income"
                             android:textColor="#2E7D32"
                             app:backgroundTint="#E8F5E9"
                             app:cornerRadius="10dp"
@@ -166,7 +166,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Expense"
+                            android:text="@string/expense"
                             android:textColor="#757575"
                             app:backgroundTint="#F5F5F5"
                             app:cornerRadius="10dp"
@@ -177,11 +177,11 @@
             </com.google.android.material.card.MaterialCardView>
 
             <Button
-                android:id="@+id/btn_save"
+                android:id="@+id/btnSave"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="22dp"
-                android:text="Save Transaction"
+                android:text="@string/save_transaction"
                 android:textColor="@color/white_text"
                 android:backgroundTint="@color/blue_button"
                 app:cornerRadius="12dp"/>

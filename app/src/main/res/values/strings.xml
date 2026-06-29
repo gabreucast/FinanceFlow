@@ -1,5 +1,26 @@
 <resources>
     <string name="app_name">FinanceFlow</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Errors">All fields must be filled in correctly</string>
+    <string name="financeflow">FinanceFlow</string>
+    <string name="save_transaction">Save Transaction</string>
+    <string name="amount">Amount ($)</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="type">TYPE</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+
+    <!-- item_transaction.xml -->
+    <string name="salary">Salary</string>
+    <string name="_01_06_2025">01/06/2025</string>
+    <string name="r_3000">+R$ 3000</string>
+    <string name="title">FinanceFlow</string>
+    <string name="extra">Extra</string>
+    <string name="saldo_total">Saldo Total</string>
+    <string name="r_0_00">R$ 0,00</string>
+    <string name="new_transaction">New Transaction</string>
+
+    <!-- item_transaction.xml -->
+
+
 </resources>
