@@ -9,7 +9,6 @@
     <string name="type">TYPE</string>
     <string name="income">Income</string>
     <string name="expense">Expense</string>
-    <string name="save_transaction">Save Transaction</string>
 
     <!-- item_transaction.xml -->
     <string name="salary">Salary</string>
