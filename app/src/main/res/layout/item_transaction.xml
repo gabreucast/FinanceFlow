@@ -27,7 +27,7 @@
                 android:id="@+id/tvDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Salary"
+                android:text="@string/salary"
                 android:textColor="@color/black_text"
                 android:textSize="18sp" />
 
@@ -36,7 +36,7 @@
                 android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="01/06/2025"
+                android:text="@string/_01_06_2025"
                 android:textColor="#9E9E9E"
                 android:textSize="13sp" />
         </LinearLayout>
@@ -46,7 +46,7 @@
             android:id="@+id/tvAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+R$ 3000"
+            android:text="@string/r_3000"
             android:textColor="#2E7D32"
             android:textSize="20sp"
             android:textStyle="bold" />
