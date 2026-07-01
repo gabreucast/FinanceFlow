@@ -15,6 +15,8 @@ class NewTransactionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewtransactionBinding
 
+    private var type = "Income"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -50,6 +52,19 @@ class NewTransactionActivity : AppCompatActivity() {
                 binding.etDate.editText?.setText(
                     it.getString("KEY_DATE").orEmpty()
                 )
+            }
+        }
+
+        binding.toggleType.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (!isChecked) return@addOnButtonCheckedListener
+
+            when (checkedId) {
+                R.id.btnIncome -> {
+                    type = "Income"
+                }
+                R.id.btnExpense -> {
+                    type = "Expense"
+                }
             }
         }
 

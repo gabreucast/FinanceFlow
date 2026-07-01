@@ -8,7 +8,10 @@
     <color name="graylight_text">#CCCCCC</color>
     <color name="white_text">#FFFFFFFF</color>
     <color name="black_text">#000000</color>
+    <color name="green_text">#2E7D32</color>
+    <color name="grayLight_text">#9E9E9E</color>
     <color name="white_box">#FFFFFFFF</color>
     <color name="blue_button">#1565C0</color>
-
+    <color name="green_debito">#00FF00</color>
+    <color name="red_credito">#FF0000</color>
 </resources>
