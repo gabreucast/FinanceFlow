@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue_ColorApp">#1565C0</color>
+    <!-- Global -->
     <color name="background">#EEF0FF</color>
-    <color name="black_cursor">#000000</color>
+    <color name="blue_ColorApp">#1565C0</color>
+    <color name="black_text">#000000</color>
+    <color name="white_text">#FFFFFFFF</color>
+    <color name="graylight_text">#CCCCCC</color>
+    <color name="grayLight_text">#9E9E9E</color>
+    <color name="white_box">#FFFFFFFF</color>
+
+    <!-- MainActivity -->
+    <color name="blue_button">#1565C0</color>
+    <color name="green_text">#2E7D32</color>
+    <color name="green_debito">#00FF00</color>
+    <color name="red_credito">#FF0000</color>
+
+    <!-- NewTransactionActivity -->
+
+    <!-- TextInputLayout -->
     <color name="blue_strokeColor">#1565C0</color>
     <color name="black_strokeColor">#000000</color>
-    <color name="graylight_text">#CCCCCC</color>
-    <color name="white_text">#FFFFFFFF</color>
-    <color name="black_text">#000000</color>
-    <color name="white_box">#FFFFFFFF</color>
-    <color name="blue_button">#1565C0</color>
+    <color name="black_cursor">#000000</color>
+    <color name="black_calendar">#000000</color>
+
+    <!-- Transaction Type - Income -->
+    <color name="green_typeIncomeSelected">#E8F5E9</color>
+    <color name="green_typeStroke">#2E7D32</color>
+    <color name="green_typoText">#2E7D32</color>
+
+    <!-- Transaction Type - Expense -->
+    <color name="red_typeExpenseSelected">#FFEBEE</color>
+    <color name="red_typeStroke">#C62828</color>
+    <color name="red_typoText">#C62828</color>
+
+    <!-- Transaction Type - Unselected -->
+    <color name="gray_typoText">#757575</color>
+    <color name="gray_typoUnselected">#F5F5F5</color>
+    <color name="gray_typoStrokeUnselected">#D6D6D6</color>
 
 </resources>

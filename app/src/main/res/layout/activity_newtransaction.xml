@@ -108,14 +108,19 @@
                 app:boxCornerRadiusTopStart="16dp"
                 app:boxStrokeColor="@color/blue_strokeColor"
                 app:cursorColor="@color/black_cursor"
+                app:endIconDrawable="@drawable/ic_calendar"
+                app:endIconMode="custom"
                 app:hintTextColor="@color/blue_strokeColor">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:inputType="date"
                     android:textColor="@color/black_text"
-                    android:textColorHint="@color/black_text" />
+                    android:textColorHint="@color/black_text"
+                    tools:ignore="KeyboardInaccessibleWidget" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.card.MaterialCardView
@@ -155,10 +160,10 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/income"
-                            android:textColor="#2E7D32"
-                            app:backgroundTint="#E8F5E9"
+                            android:textColor="@color/green_typoText"
+                            app:backgroundTint="@color/green_typeIncomeSelected"
                             app:cornerRadius="10dp"
-                            app:strokeColor="#2E7D32"
+                            app:strokeColor="@color/green_typeStroke"
                             app:strokeWidth="2dp" />
 
                         <com.google.android.material.button.MaterialButton
@@ -167,10 +172,10 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/expense"
-                            android:textColor="#757575"
-                            app:backgroundTint="#F5F5F5"
+                            android:textColor="@color/gray_typoText"
+                            app:backgroundTint="@color/gray_typoUnselected"
                             app:cornerRadius="10dp"
-                            app:strokeColor="#D6D6D6"
+                            app:strokeColor="@color/gray_typoStrokeUnselected"
                             app:strokeWidth="1dp" />
                     </com.google.android.material.button.MaterialButtonToggleGroup>
                 </LinearLayout>
@@ -181,10 +186,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="22dp"
+                android:backgroundTint="@color/blue_button"
                 android:text="@string/save_transaction"
                 android:textColor="@color/white_text"
-                android:backgroundTint="@color/blue_button"
-                app:cornerRadius="12dp"/>
+                app:cornerRadius="12dp" />
         </LinearLayout>
 
     </LinearLayout>
