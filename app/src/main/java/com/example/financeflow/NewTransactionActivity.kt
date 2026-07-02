@@ -1,6 +1,7 @@
 package com.example.financeflow
 
 import android.R.attr.description
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.financeflow.databinding.ActivityNewtransactionBinding
+import java.util.Calendar
+import java.util.Locale
 
 
 class NewTransactionActivity : AppCompatActivity() {
@@ -55,18 +58,66 @@ class NewTransactionActivity : AppCompatActivity() {
             }
         }
 
+        binding.etDate.editText?.setOnClickListener {
+            val calendar = Calendar.getInstance()
+
+            val dialog = DatePickerDialog(this, { _, year, month, dayOfMonth ->
+                val date = String.format(
+                    Locale.getDefault(),
+                    "%02d/%02d/%04d",
+                    dayOfMonth,
+                    month + 1,
+                    year
+                )
+                binding.etDate.editText?.setText(date)
+            }, calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH))
+            dialog.show()
+        } // binding.etDate.editText?.setOnClickListener
+
         binding.toggleType.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (!isChecked) return@addOnButtonCheckedListener
 
             when (checkedId) {
                 R.id.btnIncome -> {
                     type = "Income"
+                    // Income seleccionado
+                    binding.btnIncome.backgroundTintList =
+                        getColorStateList(R.color.green_typeIncomeSelected)
+                    binding.btnIncome.strokeColor =
+                        getColorStateList(R.color.green_typeStroke)
+                    binding.btnIncome.setTextColor(getColor(R.color.green_typoText))
+                    binding.btnIncome.strokeWidth = 2
+
+                    // Expense deseleccionado
+                    binding.btnExpense.backgroundTintList =
+                        getColorStateList(R.color.gray_typoUnselected)
+                    binding.btnExpense.strokeColor =
+                        getColorStateList(R.color.gray_typoStrokeUnselected)
+                    binding.btnExpense.setTextColor(getColor(R.color.gray_typoText))
+                    binding.btnExpense.strokeWidth = 1
                 }
                 R.id.btnExpense -> {
                     type = "Expense"
+                    // Income deseleccionado
+                    binding.btnIncome.backgroundTintList =
+                        getColorStateList(R.color.gray_typoUnselected)
+                    binding.btnIncome.strokeColor =
+                        getColorStateList(R.color.gray_typoStrokeUnselected)
+                    binding.btnIncome.setTextColor(getColor(R.color.gray_typoText))
+                    binding.btnIncome.strokeWidth = 1
+
+                    // Expense seleccionado
+                    binding.btnExpense.backgroundTintList =
+                        getColorStateList(R.color.red_typeExpenseSelected)
+                    binding.btnExpense.strokeColor =
+                        getColorStateList(R.color.red_typeStroke)
+                    binding.btnExpense.setTextColor(getColor(R.color.red_typoText))
+                    binding.btnExpense.strokeWidth = 2
                 }
-            }
-        }
+            } // when
+        } // binding.toggleType.addOnButtonCheckedListener
 
         binding.btnSave.setOnClickListener {
 
@@ -102,7 +153,7 @@ class NewTransactionActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
-        }
+        } // binding.btnSave.setOnClickListener
 
     } // onCreate
 
